@@ -1,0 +1,6 @@
+Greetings= input("Enter your welcome Greetings")
+Ussd_code = input("Enter your Ussd code")
+print(f"{Greetings}")
+print("1.\tCheck balance\n2.\tBuy Airtime\n3.\tBuy data")
+option = input("chose an option")
+print(f"Buy Airtme\n1.\t500" + "\n2.\t300" + "\n3.\t200")

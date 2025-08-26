@@ -1,0 +1,13 @@
+# #3
+print("enter 5 nigerian states")
+state_1= input("Enter your state: ")
+state_2= input("Enter your state: ")
+state_3= input("Enter your state: ")
+state_4= input("Enter your state: ")
+state_5= input("Enter your state: ")
+Nigerian_state = (state_1,state_2, state_3, state_4, state_5)
+print(Nigerian_state)
+print(Nigerian_state[0])
+print(Nigerian_state[4])
+print("Lagos"  in Nigerian_state)
+# print(f"{len(Nigerian_state)}")

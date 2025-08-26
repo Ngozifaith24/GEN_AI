@@ -1,0 +1,10 @@
+#2 Tuple and input
+print("ask the user for 5 best friends name")
+bf_1 = input("enter your bf_1")
+bf_2 = input("enter your bf_2")
+bf_3 = input("enter your bf_3")
+bf_4 = input("enter your bf_4")
+bf_5 = input("enter your bf_5")
+friends = (bf_1, bf_2, bf_3, bf_4, bf_5)
+print(friends)
+print(friends[::-1])

@@ -1,0 +1,6 @@
+age_str = input("Enter your age")
+height_str = input ("Enter your height")
+name = input("Enter your name")
+age = int(age_str)
+height_in_meter = float(height_str)
+print(f"{age}\t{height_in_meter}\t{name}")

@@ -1,0 +1,12 @@
+#6 
+days_of_the_week = ("sunday", "monday", "tuesday","wednesday", "thursday", "friday","saturday")
+Months_of_the_year = ("January", "Febuary", "March", "April","May","June","July", "August","September","October","November","December" )
+print(days_of_the_week)
+print(Months_of_the_year)
+print("Enter your details")
+Student_name = input("Enter your name:")
+Gender = input("Enter your: ")
+course_track = input("Enter your track:")
+current_month_num = input("enter your month num:")
+current_day_num = input("Enter your current day num:")
+print(f"Student Attendance tracker\n==============================\nStudent name:\t{Student_name}\nGender:\t{Gender}\nCourse track:\t{course_track}\nCurrent Month:\t{current_month_num}\nCurrent Day:\t{current_day_num}\n=================================")

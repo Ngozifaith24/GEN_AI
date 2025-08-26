@@ -1,0 +1,17 @@
+
+#5Modify tuple indirectly
+print("Ask user tro enter their list")
+item_1 = input("Enter your first item: ")
+item_2 = input("Enter your second itemm")
+item_3 = input("Enter your third item")
+shopping_list = (item_1,item_2,item_3)
+print(shopping_list)
+lst = list(shopping_list)
+print("Ask user to enter tnew list")
+item_4 = input("Enter the new item 1")
+item_5 = input("Enter your new item 2")
+new_list =(f"{item_4}, {item_5}")
+lst.append(new_list)
+print(lst)
+shopping_list= tuple(lst)
+print(shopping_list)

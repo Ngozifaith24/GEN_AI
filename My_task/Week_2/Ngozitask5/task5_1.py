@@ -1,0 +1,7 @@
+dishes= input("enter 3 of your favorite dish:")
+dish_1 = ("rice")
+dish_2 = ("beans")
+dish_3 = ("dodo")
+dishes = (dish_1 ,dish_2, dish_3)
+print(dishes)
+print(f"{dish_1}\n{dish_2}\n{dish_3}")

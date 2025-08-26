@@ -1,0 +1,13 @@
+school_name = input("Enter the school name")
+Tution_fee = float(input("Enter the tution fee:"))
+Hostel_fee = float(input("Enter the Hostel fee:"))
+Feeding_fee = float(input("Enter the feeding fee: "))
+Total_fee = Tution_fee + Hostel_fee + Feeding_fee 
+print(f"\t{school_name}")
+print("\n========== RECEIPT =========")
+print(f"Tution_fee:\t\t#{Tution_fee:.2f}")
+print(f"Hostel_fee:\t\t#{Hostel_fee:.2f}")
+print(f"Feeding_fee:\t\t#{Feeding_fee:.2f}")
+print("----------------------------------")
+print(f"Total_fee:\t\t#{Total_fee: .2f}")
+print("===============================")
