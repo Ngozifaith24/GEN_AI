@@ -211,3 +211,134 @@ print(participant_profile(
     "Networking", "Ethical Hacking", "Python",
     interest="Blockchain", city="Shagamu", phone="08123456789"
 ))
+
+#namespaces, 
+# Global Namespace
+employee = "General Employee"  
+
+def IT_department():
+    # Local Namespace inside IT_department
+    employee = "Chris (IT)"
+    print("Inside IT Department:", employee)
+
+def Training_department():
+    # Local Namespace inside Training_department
+    employee = "Chris (Training)"
+    print("Inside Training Department:", employee)
+
+print("In Global Namespace:", employee)  # Refers to global variable
+
+IT_department()   # Uses local variable in IT
+Training_department()   # Uses local variable in Training
+
+# Using a built-in namespace function
+print("Length of 'Python':", len("Python"))  
+
+# So 'Chris' can exist in more than one namespace without conflict.
+# Please, take your time to study the output carefully.
+
+
+# scope
+x = "global x"   # Global Namespace
+
+def outer():
+    x = "enclosing x"  # Enclosing Namespace
+    
+    def inner():
+        x = "local x"  # Local Namespace
+        print("Inside inner:", x)  # Local wins
+    
+    inner()
+    print("Inside outer:", x)  # Enclosing
+    
+outer()
+print("In global:", x)  # Global
+
+# Watch the output
+# Notice how Python searches in the order Local → Enclosing → Global → Built-in (LEGB).
+
+
+### Global keyword
+
+# Used when you want to modify a global variable inside a function.
+
+x = 5
+
+def change_global():
+    global x
+    x = 10   # modifies the global x
+
+change_global()
+print(x)  # Output: 10
+
+# Watch the output
+
+# nonlocal keyword
+
+#Used in nested functions when you want to modify the variable from the enclosing scope (not global).
+
+def outer():
+    x = "outer x"
+    
+    def inner():
+        nonlocal x
+        x = "changed by inner"
+        print("Inside inner:", x)
+    
+    inner()
+    print("Inside outer:", x)
+
+outer()
+
+# Watch the output
+
+#LAMBDA
+
+# Normal function
+def square(x):
+    return x ** 2
+
+# Lambda function
+square_lambda = lambda x: x ** 2
+
+print(square(5))         
+print(square_lambda(5))  
+
+# Watch the output and note the difference
+
+# This one has more that one arguments.
+
+add = lambda a, b: a + b
+print(add(3, 7))  # Output: 10
+
+# Let us lambda to apply the square function to a list
+
+numbers = [1, 2, 3, 4]
+squares = list(map(lambda x: x**2, numbers))
+print(squares)  # Output: [1, 4, 9, 16]
+
+# Lets use lambda to filter even numbers 
+
+numbers = [10, 15, 20, 25, 30]
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # Output: [10, 20, 30]
+
+# Lets use lambda to sort the tuple within a list.
+
+students = [("Ayo", 20), ("Bola", 18), ("Chika", 22)]
+# Sort by age
+sorted_students = sorted(students, key=lambda student: student[1])
+print(sorted_students)
+
+  
+# Output: [('Bola', 18), ('Ayo', 20), ('Chika', 22)]
+
+students_sorted_descending = sorted(students, key=lambda student: student[1], reverse=True)
+print(students_sorted_descending)
+
+# Output: [('Chika', 22), ('Ayo', 20), ('Bola', 18)]
+
+students_sorted_alphabetically = sorted(students, key=lambda student: student[0])
+print(students_sorted_alphabetically)
+
+# Output: [('Ayo', 20), ('Bola', 18), ('Chika', 22)]
