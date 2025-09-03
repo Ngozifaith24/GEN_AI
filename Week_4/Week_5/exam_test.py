@@ -15,9 +15,12 @@
 
 # Simple To-Do List Application
 
+
 # List to store tasks
 tasks = []
 completed_tasks = []
+f = open(tasks, "w", encoding="utf-8")
+
 # Function to add a task to the list
 def add_task(task):
     # return( tasks)
@@ -80,7 +83,5 @@ print("=================\nNGOZI TO DO LIST TRACKER\n==============")
 print(f"{tasks}\n{completed_tasks}")
 
 
-f = open(tasks, "w", encoding="utf-8")
-f.write("This is the first line in notes.txt\n")
-f.close()
+
 
