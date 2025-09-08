@@ -1,3 +1,3 @@
 #No.1
-name = input("Enter Your name")
+name = input("Enter Your name: ")
 print(name.upper())
